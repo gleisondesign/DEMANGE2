@@ -158,15 +158,16 @@
       }
 
       /* Menu mobile */
-      .mobile-menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: all 0.5s ease-out;
-      }
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
 
-      .mobile-menu.open {
-        max-height: 500px;
-      }
+.mobile-menu.open {
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
 
       /* Carousel styles */
       .carousel-container {
@@ -225,7 +226,7 @@
   <body class="bg-white text-gray-900">
     <!-- Header -->
     <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-500">
-      <div class="container mx-auto px-6 lg:px-8">
+      <div class="w-full max-w-[1280px] mx-auto px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
           <!-- Logo -->
           <div class="flex items-center">
@@ -321,7 +322,7 @@
       </div>
 
       <!-- Content -->
-      <div class="relative z-10 container mx-auto px-6 lg:px-8 flex items-center min-h-screen">
+<div class="relative z-10 w-full max-w-[1280px] mx-auto px-6 lg:px-8 flex items-center min-h-screen">
         <div class="max-w-4xl pt-20">
           <div class="text-white space-y-10 animate-fade-in-up">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
@@ -433,301 +434,397 @@
       </div>
     </section>
 
-    <!-- Dr. Demange na Mídia Section -->
-    <section id="midia" class="py-24 md:py-32 bg-white fade-in-section">
-      <div class="container mx-auto px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto">
-          <!-- Header -->
-          <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-6">
-            Demange na Mídia
-            </h2>
-            <div class="w-24 h-px bg-gray-400 mx-auto mb-8"></div>
-            <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
-              Veja as últimas Matérias, Artigos e Postagens onde o Dr. Demange fala sobre os tratamentos mais modernos e inovadores para o joelho. Conteúdos exclusivos sobre tecnologia, cirurgias avançadas e novas abordagens que estão revolucionando a ortopedia.
-            </p>
-          </div>
-
-          <!-- Carousel Container -->
-          <div class="relative">
-            <!-- Desktop Navigation Arrows -->
-            <button id="media-prev-btn" class="hidden md:flex absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200">
-              <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-              </svg>
-            </button>
-            <button id="media-next-btn" class="hidden md:flex absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200">
-              <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-              </svg>
-            </button>
-
-            <!-- Carousel Track -->
-            <div class="overflow-hidden">
-              <div id="media-carousel-track" class="flex transition-transform duration-500 ease-out cursor-grab" style="gap: 1.5rem;">
-                
-          <!-- Card 1 - IstoÉ Saúde -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://istoesaude.com.br/wp-content/uploads/sites/34/2025/10/a-atividade-fisica-e-fundamental-para-a-prevencao-de-osteoporose.jpg" alt="Osteoporose" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                IstoÉ Saúde
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Perigo de fraturas na velhice: como a osteoporose pode ser evitada
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                A osteoporose afeta mais de 15 milhões de brasileiros, segundo a OMS, e exige cuidados preventivos para reduzir o risco de fraturas.
-              </p>
-              <a href="https://istoesaude.com.br/perigo-de-fraturas-na-velhice-entenda-a-osteoporose-e-saiba-como-se-cuidar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 2 - Healthcare Grupo Mídia -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://wp-microport-gmps.s3.eu-central-1.amazonaws.com/2024/05/Image-Demange-MAY24.jpg" alt="Hospital Vila Nova Star" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Healthcare – Grupo Mídia
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Hospital Vila Nova Star reforça equipe com referência em ortopedia
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                O cirurgião de joelho Marco Demange passa a integrar o Hospital Vila Nova Star, ampliando o uso de tecnologia avançada na unidade.
-              </p>
-              <a href="https://healthcare.grupomidia.com/hospital-vila-nova-star-contrata-estrela-da-ortopedia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 3 - Terra (Beach tennis) -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://p2.trrsf.com/image/fget/cf/1548/0/images.terra.com/2025/12/10/62341735-beachtennis.jpg" alt="Beach tennis Terra" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Terra
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Como reduzir o risco de lesões no beach tennis
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                A modalidade já reúne mais de 1,1 milhão de jogadores no país e pede atenção à prevenção durante os treinos e partidas.
-              </p>
-              <a href="https://www.terra.com.br/vida-e-estilo/saude/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes,995587d1c50cd4e0825661ea9063e77cnqk88d7k.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 4 - Catraca Livre (Beach tennis) -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://cdn.shopify.com/s/files/1/0805/0556/9577/files/Depositphotos_362216754_S_2048x2048.jpg" alt="Beach tennis em alta" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Catraca Livre
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Beach tennis em alta: cuidados essenciais para evitar lesões
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                O crescimento do beach tennis reforça a importância de seguir orientações simples para uma prática mais segura e saudável.
-              </p>
-              <a href="https://catracalivre.com.br/saude-bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/#google_vignette" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 5 - Carta Capital (Beach tennis) -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://www.cartacapital.com.br/wp-content/uploads/2025/12/pessoas-beach-tennis-1024x683-1024x683.jpg" alt="Beach tennis" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Carta Capital
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Beach tennis: dicas para jogar com menos risco de lesões
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                Com mais de 1,1 milhão de praticantes no Brasil, o esporte exige cuidados básicos para evitar lesões nas quadras de areia.
-              </p>
-              <a href="https://www.cartacapital.com.br/bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- ✅ Duplicados para Infinite Loop (mesma ordem) -->
-
-          <!-- Card 1 Duplicate - IstoÉ Saúde -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://istoesaude.com.br/wp-content/uploads/sites/34/2025/10/a-atividade-fisica-e-fundamental-para-a-prevencao-de-osteoporose.jpg" alt="Osteoporose" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                IstoÉ Saúde
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Perigo de fraturas na velhice: como a osteoporose pode ser evitada
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                A osteoporose afeta mais de 15 milhões de brasileiros, segundo a OMS, e exige cuidados preventivos para reduzir o risco de fraturas.
-              </p>
-              <a href="https://istoesaude.com.br/perigo-de-fraturas-na-velhice-entenda-a-osteoporose-e-saiba-como-se-cuidar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 2 Duplicate - Healthcare Grupo Mídia -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://wp-microport-gmps.s3.eu-central-1.amazonaws.com/2024/05/Image-Demange-MAY24.jpg" alt="Hospital Vila Nova Star" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Healthcare – Grupo Mídia
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Hospital Vila Nova Star reforça equipe com referência em ortopedia
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                O cirurgião de joelho Marco Demange passa a integrar o Hospital Vila Nova Star, ampliando o uso de tecnologia avançada na unidade.
-              </p>
-              <a href="https://healthcare.grupomidia.com/hospital-vila-nova-star-contrata-estrela-da-ortopedia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 3 Duplicate - Terra (Beach tennis) -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://p2.trrsf.com/image/fget/cf/1548/0/images.terra.com/2025/12/10/62341735-beachtennis.jpg" alt="Beach tennis Terra" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Terra
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Como reduzir o risco de lesões no beach tennis
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                A modalidade já reúne mais de 1,1 milhão de jogadores no país e pede atenção à prevenção durante os treinos e partidas.
-              </p>
-              <a href="https://www.terra.com.br/vida-e-estilo/saude/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes,995587d1c50cd4e0825661ea9063e77cnqk88d7k.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 4 Duplicate - Catraca Livre (Beach tennis) -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://cdn.shopify.com/s/files/1/0805/0556/9577/files/Depositphotos_362216754_S_2048x2048.jpg" alt="Beach tennis em alta" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Catraca Livre
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Beach tennis em alta: cuidados essenciais para evitar lesões
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                O crescimento do beach tennis reforça a importância de seguir orientações simples para uma prática mais segura e saudável.
-              </p>
-              <a href="https://catracalivre.com.br/saude-bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/#google_vignette" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 5 Duplicate - Carta Capital (Beach tennis) -->
-          <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
-            <div class="relative overflow-hidden">
-              <img src="https://www.cartacapital.com.br/wp-content/uploads/2025/12/pessoas-beach-tennis-1024x683-1024x683.jpg" alt="Beach tennis" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
-              <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
-                Carta Capital
-              </div>
-            </div>
-            <div class="p-5">
-              <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
-                Beach tennis: dicas para jogar com menos risco de lesões
-              </h3>
-              <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
-                Com mais de 1,1 milhão de praticantes no Brasil, o esporte exige cuidados básicos para evitar lesões nas quadras de areia.
-              </p>
-              <a href="https://www.cartacapital.com.br/bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
-                Ler conteúdo
-                <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
+<!-- Dr. Demange na Mídia Section -->
+<section id="midia" class="py-24 md:py-32 bg-white fade-in-section">
+  <div class="container mx-auto px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-6">
+          Demange na Mídia
+        </h2>
+        <div class="w-24 h-px bg-gray-400 mx-auto mb-8"></div>
+        <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-light">
+          Veja as últimas Matérias, Artigos e Postagens onde o Dr. Demange fala sobre os tratamentos mais modernos e inovadores para o joelho. Conteúdos exclusivos sobre tecnologia, cirurgias avançadas e novas abordagens que estão revolucionando a ortopedia.
+        </p>
       </div>
 
-            <!-- Mobile Navigation Arrows -->
-            <div class="flex md:hidden justify-center gap-4 mt-6">
-              <button id="media-prev-btn-mobile" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
-                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-              </button>
-              <button id="media-next-btn-mobile" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
-                <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </button>
+      <!-- Carousel Container -->
+      <div class="relative">
+        <!-- Desktop Navigation Arrows -->
+        <button id="media-prev-btn" class="hidden md:flex absolute -left-4 lg:-left-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200">
+          <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        <button id="media-next-btn" class="hidden md:flex absolute -right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-10 w-12 h-12 items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 border border-gray-200">
+          <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+
+        <!-- Carousel Track -->
+        <div class="overflow-hidden">
+          <div id="media-carousel-track" class="flex transition-transform duration-500 ease-out cursor-grab" style="gap: 1.5rem;">
+
+            <!-- Card 1 - ND+ -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://static.ndmais.com.br/2023/10/lesao-neymar-800x533.jpg" alt="Lesão de ligamento cruzado anterior" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  ND+
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Lesão de ligamento cruzado anterior que tirou Pedro, do Flamengo
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  O primeiro pilar do tratamento é o tempo do ligamento se formar e ficar com resistência equivalente ao antigo. O segundo é o da força muscular.
+                </p>
+                <a href="https://ndmais.com.br/futebol/o-que-e-a-lesao-de-ligamento-cruzado-anterior-que-tirou-pedro-do-flamengo-da-temporada/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
             </div>
+
+            <!-- Card 2 - Saúde Digital News -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://saudedigitalnews.com.br/wp-content/uploads/2025/09/unnamed-2025-09-16T184105.885-1170x658.jpg" alt="Tecnologia robótica para cirurgia ortopédica" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Saúde Digital News
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Rede D’Or avança no Brasil com inédita tecnologia robótica
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  Brasil, são os primeiros da América Latina a disponibilizarem uma nova tecnologia para cirurgia robótica ortopédica.
+                </p>
+                <a href="https://saudedigitalnews.com.br/16/09/2025/rede-dor-avanca-no-brasil-com-inedita-tecnologia-robotica-para-cirurgia-ortopedica/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3 - IstoÉ Saúde -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://istoesaude.com.br/wp-content/uploads/sites/34/2025/10/a-atividade-fisica-e-fundamental-para-a-prevencao-de-osteoporose.jpg" alt="Osteoporose" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  IstoÉ Saúde
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Perigo de fraturas na velhice: como a osteoporose pode ser evitada
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  A osteoporose afeta mais de 15 milhões de brasileiros, segundo a OMS, e exige cuidados preventivos para reduzir o risco de fraturas.
+                </p>
+                <a href="https://istoesaude.com.br/perigo-de-fraturas-na-velhice-entenda-a-osteoporose-e-saiba-como-se-cuidar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 4 - Healthcare Grupo Mídia -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://wp-microport-gmps.s3.eu-central-1.amazonaws.com/2024/05/Image-Demange-MAY24.jpg" alt="Hospital Vila Nova Star" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Healthcare – Grupo Mídia
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Hospital Vila Nova Star reforça equipe com referência em ortopedia
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  O cirurgião de joelho Marco Demange passa a integrar o Hospital Vila Nova Star, ampliando o uso de tecnologia avançada na unidade.
+                </p>
+                <a href="https://healthcare.grupomidia.com/hospital-vila-nova-star-contrata-estrela-da-ortopedia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5 - Terra (Beach tennis) -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://p2.trrsf.com/image/fget/cf/1548/0/images.terra.com/2025/12/10/62341735-beachtennis.jpg" alt="Beach tennis Terra" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Terra
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Como reduzir o risco de lesões no beach tennis
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  A modalidade já reúne mais de 1,1 milhão de jogadores no país e pede atenção à prevenção durante os treinos e partidas.
+                </p>
+                <a href="https://www.terra.com.br/vida-e-estilo/saude/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes,995587d1c50cd4e0825661ea9063e77cnqk88d7k.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 6 - Catraca Livre (Beach tennis) -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://cdn.shopify.com/s/files/1/0805/0556/9577/files/Depositphotos_362216754_S_2048x2048.jpg" alt="Beach tennis em alta" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Catraca Livre
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Beach tennis em alta: cuidados essenciais para evitar lesões
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  O crescimento do beach tennis reforça a importância de seguir orientações simples para uma prática mais segura e saudável.
+                </p>
+                <a href="https://catracalivre.com.br/saude-bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/#google_vignette" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 7 - Carta Capital (Beach tennis) -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://www.cartacapital.com.br/wp-content/uploads/2025/12/pessoas-beach-tennis-1024x683-1024x683.jpg" alt="Beach tennis" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Carta Capital
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Beach tennis: dicas para jogar com menos risco de lesões
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  Com mais de 1,1 milhão de praticantes no Brasil, o esporte exige cuidados básicos para evitar lesões nas quadras de areia.
+                </p>
+                <a href="https://www.cartacapital.com.br/bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- ✅ Duplicados para Infinite Loop (mesma ordem) -->
+
+            <!-- Card 1 Duplicate - ND+ -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://static.ndmais.com.br/2023/10/lesao-neymar-800x533.jpg" alt="Lesão de ligamento cruzado anterior" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  ND+
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Lesão de ligamento cruzado anterior que tirou Pedro, do Flamengo
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  O primeiro pilar do tratamento é o tempo do ligamento se formar e ficar com resistência equivalente ao antigo. O segundo é o da força muscular.
+                </p>
+                <a href="https://ndmais.com.br/futebol/o-que-e-a-lesao-de-ligamento-cruzado-anterior-que-tirou-pedro-do-flamengo-da-temporada/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2 Duplicate - Saúde Digital News -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://saudedigitalnews.com.br/wp-content/uploads/2025/09/unnamed-2025-09-16T184105.885-1170x658.jpg" alt="Tecnologia robótica para cirurgia ortopédica" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Saúde Digital News
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Rede D’Or avança no Brasil com inédita tecnologia robótica
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  Brasil, são os primeiros da América Latina a disponibilizarem uma nova tecnologia para cirurgia robótica ortopédica.
+                </p>
+                <a href="https://saudedigitalnews.com.br/16/09/2025/rede-dor-avanca-no-brasil-com-inedita-tecnologia-robotica-para-cirurgia-ortopedica/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3 Duplicate - IstoÉ Saúde -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://istoesaude.com.br/wp-content/uploads/sites/34/2025/10/a-atividade-fisica-e-fundamental-para-a-prevencao-de-osteoporose.jpg" alt="Osteoporose" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  IstoÉ Saúde
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Perigo de fraturas na velhice: como a osteoporose pode ser evitada
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  A osteoporose afeta mais de 15 milhões de brasileiros, segundo a OMS, e exige cuidados preventivos para reduzir o risco de fraturas.
+                </p>
+                <a href="https://istoesaude.com.br/perigo-de-fraturas-na-velhice-entenda-a-osteoporose-e-saiba-como-se-cuidar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 4 Duplicate - Healthcare Grupo Mídia -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://wp-microport-gmps.s3.eu-central-1.amazonaws.com/2024/05/Image-Demange-MAY24.jpg" alt="Hospital Vila Nova Star" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Healthcare – Grupo Mídia
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Hospital Vila Nova Star reforça equipe com referência em ortopedia
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  O cirurgião de joelho Marco Demange passa a integrar o Hospital Vila Nova Star, ampliando o uso de tecnologia avançada na unidade.
+                </p>
+                <a href="https://healthcare.grupomidia.com/hospital-vila-nova-star-contrata-estrela-da-ortopedia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5 Duplicate - Terra (Beach tennis) -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://p2.trrsf.com/image/fget/cf/1548/0/images.terra.com/2025/12/10/62341735-beachtennis.jpg" alt="Beach tennis Terra" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Terra
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Como reduzir o risco de lesões no beach tennis
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  A modalidade já reúne mais de 1,1 milhão de jogadores no país e pede atenção à prevenção durante os treinos e partidas.
+                </p>
+                <a href="https://www.terra.com.br/vida-e-estilo/saude/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes,995587d1c50cd4e0825661ea9063e77cnqk88d7k.html" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 6 Duplicate - Catraca Livre (Beach tennis) -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://cdn.shopify.com/s/files/1/0805/0556/9577/files/Depositphotos_362216754_S_2048x2048.jpg" alt="Beach tennis em alta" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Catraca Livre
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Beach tennis em alta: cuidados essenciais para evitar lesões
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  O crescimento do beach tennis reforça a importância de seguir orientações simples para uma prática mais segura e saudável.
+                </p>
+                <a href="https://catracalivre.com.br/saude-bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/#google_vignette" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 7 Duplicate - Carta Capital (Beach tennis) -->
+            <div class="flex-shrink-0 w-full md:w-[calc(33.333%-1rem)] bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+              <div class="relative overflow-hidden">
+                <img src="https://www.cartacapital.com.br/wp-content/uploads/2025/12/pessoas-beach-tennis-1024x683-1024x683.jpg" alt="Beach tennis" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute top-3 left-3 bg-gray-900/90 text-white text-xs font-medium px-3 py-1 rounded-full">
+                  Carta Capital
+                </div>
+              </div>
+              <div class="p-5">
+                <h3 class="text-lg font-medium text-gray-900 mb-2 line-clamp-2 leading-tight">
+                  Beach tennis: dicas para jogar com menos risco de lesões
+                </h3>
+                <p class="text-sm text-gray-600 mb-4 line-clamp-3 font-light">
+                  Com mais de 1,1 milhão de praticantes no Brasil, o esporte exige cuidados básicos para evitar lesões nas quadras de areia.
+                </p>
+                <a href="https://www.cartacapital.com.br/bem-estar/beach-tennis-5-dicas-para-reduzir-o-risco-de-lesoes/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-sm font-medium text-gray-800 hover:text-gray-600 transition-colors duration-300 group/link">
+                  Ler conteúdo
+                  <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <!-- Mobile Navigation Arrows -->
+        <div class="flex md:hidden justify-center gap-4 mt-6">
+          <button id="media-prev-btn-mobile" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button id="media-next-btn-mobile" class="w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <!-- Cirurgia de Joelho Section -->
     <section id="cirurgia-joelho" class="py-40 fade-in-section" style="background: linear-gradient(135deg, var(--brushed-steel), #0e3956);">
@@ -1193,11 +1290,11 @@
       <div class="container mx-auto px-6 lg:px-8">
         <div class="text-center mb-24">
           <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-8">
-            Clínica própria e principais locais para procedimentos
+          Clínica própria com estrutura completa
           </h2>
           <div class="w-24 h-px bg-gray-900 mx-auto mb-12"></div>
           <p class="text-xl text-gray-600 max-w-4xl mx-auto font-light leading-relaxed">
-            Além de nossa clínica própria também realizamos nossos procedimentos cirúrgicos nos melhores hospitais da cidade de São Paulo
+          A Clínica Demange conta com estrutura moderna, ambiente acolhedor e suporte especializado para proporcionar uma boa experiência, organizada e personalizada aos pacientes.
           </p>
         </div>
 
@@ -1205,12 +1302,12 @@
           <!-- Clínica Demange -->
           <div class="bg-gray-50 rounded-lg overflow-hidden fade-in-section">
             <div class="aspect-video">
-              <img src="https://www.demange.com.br/src/hosp-05.png" alt="Clínica Demange" class="w-full h-full object-cover">
+              <img src="https://www.demange.com.br/src/clinica-dr-demange-01.png" alt="Clínica Demange" class="w-full h-full object-cover">
             </div>
             <div class="p-8 text-center">
               <h3 class="text-xl font-light text-gray-900 mb-4">Clínica Demange</h3>
               <p class="text-gray-700 font-light leading-relaxed">
-                Ambiente particular exclusivo, com atenção dedicada e tecnologias próprias inovadoras.
+                Clínica própria com estrutura completa para atendimento e acompanhamento especializado.
               </p>
             </div>
           </div>
@@ -1218,12 +1315,12 @@
           <!-- Vila Nova Star -->
           <div class="bg-gray-50 rounded-lg overflow-hidden fade-in-section">
             <div class="aspect-video">
-              <img src="https://www.demange.com.br/src/hosp-06.png" alt="Vila Nova Star" class="w-full h-full object-cover">
+              <img src="https://www.demange.com.br/src/clinica-dr-demange-02.png" alt="Vila Nova Star" class="w-full h-full object-cover">
             </div>
             <div class="p-8 text-center">
-              <h3 class="text-xl font-light text-gray-900 mb-4">Vila Nova Star</h3>
+              <h3 class="text-xl font-light text-gray-900 mb-4">Time estruturado</h3>
               <p class="text-gray-700 font-light leading-relaxed">
-                Hospital premium com foco em tecnologia e conforto com excelência médica em ambiente sofisticado.
+                Ambiente moderno, total suporte na recepção com time de especialistas dedicadas.
               </p>
             </div>
           </div>
@@ -1231,12 +1328,12 @@
           <!-- Hospital Albert Einstein -->
           <div class="bg-gray-50 rounded-lg overflow-hidden fade-in-section">
             <div class="aspect-video">
-              <img src="https://www.demange.com.br/src/hosp-07.png" alt="Hospital Albert Einstein" class="w-full h-full object-cover">
+              <img src="https://www.demange.com.br/src/clinica-dr-demange-03.png" alt="Hospital Albert Einstein" class="w-full h-full object-cover">
             </div>
             <div class="p-8 text-center">
-              <h3 class="text-xl font-light text-gray-900 mb-4">Hospital Albert Einstein</h3>
+              <h3 class="text-xl font-light text-gray-900 mb-4">Fácil localição</h3>
               <p class="text-gray-700 font-light leading-relaxed">
-                Referência mundial em saúde, unindo tradição, inovação e excelência médica.
+                Endereço privilegiado, com fácil acesso e localização estratégica em São Paulo.
               </p>
             </div>
           </div>
@@ -1538,13 +1635,179 @@
 
               <p class="text-gray-700 font-light leading-relaxed">BONADIO, MARCELO BATISTA ; HELITO, CAMILO PARTEZANI ; FONI, NOEL OIZEROVICI ; DA MOTA E ALBUQUERQUE, ROBERTO FREIRE ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS ; DEMANGE, MARCO KAWAMURA ; ANGELINI, FÁBIO JANSON . Combined reconstruction of the posterior cruciate ligament and medial collateral ligament using a single femoral tunnel. <em>Knee Surgery, Sports Traumatology, Arthroscopy</em>, v. 1, p. Epub, 2016.</p>
 
-              <!-- Continue reading link -->
-              <div class="text-center pt-6">
-                <a href="https://www.joelho.com/dr-marco-demange/artigos-cientificos/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-gray-900 hover:text-gray-600 font-light text-sm uppercase tracking-wider border-b border-gray-900 pb-1 transition-colors duration-300">
-                  Continuar lendo artigos
-                  <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </a>
-              </div>
+              <p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; BONADIO, MARCELO BATISTA ; ROZAS, JOÃO STEFAN ; WEY, JOÃO MARCELO PEDROSO ; PEREIRA, CESAR AUGUSTO MARTINS ; CARDOSO, TULIO PEREIRA ; Pécora, José Ricardo ; Camanho, Gilberto Luis ; DEMANGE, MARCO KAWAMURA . Biomechanical study of strength and stiffness of the knee anterolateral ligament. <em>BMC Musculoskeletal Disorders (Online)</em>, v. 17, p. 27129387, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HINCKEL, BETINA B. ; Demange, Marco K. ; GOBBI, RICCARDO G. ; Pécora, José Ricardo ; Camanho, Gilberto Luis . The Effect of Mechanical Varus on Anterior Cruciate Ligament and Lateral Collateral Ligament Stress: Finite Element Analyses. <em>Orthopedics (Thorofare, N.J.)</em>, v. Apr25, p. 1-8, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">GOBBI, RICCARDO G. ; Demange, Marco K. ; DE ÁVILA, LUIZ FRANCISCO RODRIGUES ; ARAÚJO FILHO, JOSÉ DE ARIMATÉIA BATISTA ; MORENO, RAMON ALFREDO ; GUTIERREZ, MARCO ANTÔNIO ; DE SÁ REBELO, MARINA ; TÍRICO, LUIS EDUARDO PASSARELLI ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS . Patellar tracking after isolated medial patellofemoral ligament reconstruction: dynamic evaluation using computed tomography. <em>KNEE SURGERY SPORTS TRAUMATOLOGY ARTHROSCOPY</em>, v. 24, p. 1-9, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">GOBBI, RICCARDO GOMES ; PEREIRA, CÉSAR AUGUSTO MARTINS ; SADIGURSKY, DAVID ; DEMANGE, MARCO KAWAMURA ; TÍRICO, LUIS EDUARDO PASSARELLI ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS . Evaluation of the isometry of different points of the patella and femur for medial patellofemoral ligament reconstruction. <em>Clinical Biomechanics (Bristol)</em>, v. 38, p. 8-12, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">JUNQUEIRA, JADER JOEL MACHADO ; HELITO, CAMILO PARTEZANI ; BONADIO, MARCELO BATISTA ; PÉCORA, JOSE RICARDO ; DEMANGE, MARCO KAWAMURA . Total knee arthroplasty with subvastus approach in patient with chronic post-traumatic patellar dislocation. <em>Revista Brasileira de Ortopedia (English Edition)</em>, v. 51, p. 614-618, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">TÍRICO, LUÍS EDUARDO PASSARELLI ; DEMANGE, MK ; SANTOS, Luiz Augusto Ubirajara ; DE REZENDE, MÁRCIA UCHOA ; HELITO, CAMILO PARTEZANI ; GOBBI, RICCARDO GOMES ; PÉCORA, José Ricardo ; CROCI, A. T. ; BUGBEE, WILLIAM DICK . Development of a Fresh Osteochondral Allograft Program Outside North America. <em>Cartilage</em>, v. 7, p. 222-228, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; BONADIO, MARCELO BATISTA ; GOBBI, RICCARDO GOMES ; DA MOTA E ALBUQUERQUE, ROBERTO FREIRE ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS ; DEMANGE, MARCO KAWAMURA . Is it safe to reconstruct the knee Anterolateral Ligament with a femoral tunnel? Frequency of Lateral Collateral Ligament and Popliteus Tendon injury. <em>INTERNATIONAL ORTHOPAEDICS</em>, v. 40, p. 821-825, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; BONADIO, MARCELO BATISTA ; SOARES, THIAGO QUEIROZ ; DA MOTA E ALBUQUERQUE, ROBERTO FREIRE ; NATALINO, RENATO JOSÉ MENDONÇA ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS ; DEMANGE, MARCO KAWAMURA . The meniscal insertion of the knee anterolateral ligament. <em>SURGICAL AND RADIOLOGIC ANATOMY</em>, v. 38, p. 223-228, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, MARCO KAWAMURA ; GOBBI, RICCARDO GOMES ; CAMANHO, GILBERTO LUIS . Fatigue meniscal tears: a description of the lesion and the results of arthroscopic partial meniscectomy. <em>INTERNATIONAL ORTHOPAEDICS</em>, v. 40, p. 399-405, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, C. P. ; TEIXEIRA, P. R. L. ; OLIVEIRA, P. R. ; CARVALHO, V. C. ; PECORA, J. R. ; CAMANHO, G. L. ; DEMANGE, M. K. ; Lima, ALM . Septic arthritis of the knee: clinical and laboratory comparison of groups with different etiologies. <em>CLINICS</em>, v. 71, p. 715-719, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; HELITO, PAULO VICTOR PARTEZANI ; COSTA, HUGO PEREIRA ; DEMANGE, MARCO KAWAMURA ; BORDALO-RODRIGUES, MARCELO . Assessment of the Anterolateral Ligament of the Knee by Magnetic Resonance Imaging in Acute Injuries of the Anterior Cruciate Ligament. <em>ARTHROSCOPY-THE JOURNAL OF ARTHROSCOPIC AND RELATED SURGERY</em>, v. 33, p. 140-146, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, M. K. ; MINAS, T. ; VON KEUDELL, A. ; SODHA, S. ; BRYANT, T. ; GOMOLL, A. H. . Intralesional Osteophyte Regrowth Following Autologous Chondrocyte Implantation after Previous Treatment with Marrow Stimulation Technique. <em>Cartilage</em>, v. 8, p. 131-138, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; DO AMARAL, CARLOS ; NAKAMICHI, YURI DA CUNHA ; GOBBI, RICCARDO GOMES ; BONADIO, MARCELO BATISTA ; NATALINO, RENATO JOSÉ MENDONÇA ; PÉCORA, José Ricardo ; CARDOSO, TULIO PEREIRA ; CAMANHO, GILBERTO LUIS ; DEMANGE, MARCO KAWAMURA . Why Do Authors Differ With Regard to the Femoral and Meniscal Anatomic Parameters of the Knee Anterolateral Ligament?. <em>Orthopaedic Journal of Sports Medicine</em>, v. 4, p. 232596711667560, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, MARCO KAWAMURA ; CAMARGO, OLAVO PIRES DE ; BARROS FILHO, TARCISIO ELOY PESSOA DE ; CAMANCHO, GILBERTO LUIS . Departament Orthopedics and Traumatology: modern orthopedics. <em>REVISTA DE MEDICINA (SÃO PAULO. ONLINE)</em>, v. 95, p. 63-67, 2016.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">Zanon, B ; HELITO, CAMILO PARTEZANI ; PECORA, J. R. ; DEMANGE, MARCO KAWAMURA ; CAMANHO, GILBERTO LUIS ; MIYAHARA, HELDER DE SOUZA ; oliveira, PRD ; Vicente, JRN ; Lima, ALM . Clinical and epidemiological differences between septic arthritis of the knee and hip caused by oxacillin-sensitive and -resistant s. aureus. <em>Clinics (USP. Impresso)</em>, v. 70, p. 30-33, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">Demange, Marco K. ; VON KEUDELL, ARVIND ; PROBST, CHRISTIAN ; YOSHIOKA, HIROSHI ; Gomoll, Andreas H. . Patient-specific implants for lateral unicompartmental knee arthroplasty. <em>International Orthopaedics</em>, v. 1, p. Epub, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HINCKEL, BETINA BREMER ; GOBBI, RICCARDO GOMES ; FILHO, EDUARDO NODA KIHARA ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS ; RODRIGUES, MARCELO BORDALO ; DEMANGE, MARCO KAWAMURA . Are the osseous and tendinous-cartilaginous tibial tuberosity-trochlear groove distances the same on CT and MRI?. <em>Skeletal Radiology</em>, v. 44, p. 1085-1093, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; DEMANGE, MARCO KAWAMURA ; HELITO, PAULO VICTOR PARTEZANI ; COSTA, HUGO PEREIRA ; BONADIO, MARCELO BATISTA ; PECORA, JOSE RICARDO ; RODRIGUES, MARCELO BORDALO ; CAMANHO, GILBERTO LUIS . Evaluation of the anterolateral ligament of the knee by means of magnetic resonance examination. <em>Revista Brasileira de Ortopedia (English Edition)</em>, v. 50, p. 214-219, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">REBOUÇAS MOREIRA, TIAGO AMARAL ; DEMANGE, MARCO KAWAMURA ; GOBBI, RICCARDO GOMES ; MUSTACCHI, ZAN ; PÉCORA, José Ricardo ; PASSARELLI TÍRICO, LUIS EDUARDO ; CAMANHO, GILBERTO LUIS . Trochlear dysplasia and patellar instability in patients with Down syndrome. <em>Revista Brasileira de Ortopedia (English Edition)</em>, v. 50, p. 159-163, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, CAMILO PARTEZANI ; BONADIO, MARCELO BATISTA ; GOBBI, RICCARDO GOMES ; DA MOTA E ALBUQUERQUE, ROBERTO FREIRE ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS ; DEMANGE, MARCO KAWAMURA . Combined Intra- and Extra-articular Reconstruction of the Anterior Cruciate Ligament: The Reconstruction of the Knee Anterolateral Ligament. <em>Arthroscopy Techniques</em>, v. 4, p. e239-e244, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HINCKEL, B. B. ; GOBBI, R. G. ; KIHARA FILHO, E. N. ; DEMANGE, M. K. ; PECORA, J. R. ; CAMANHO, G. L. . Patellar Tendon-Trochlear Groove Angle Measurement: A New Method for Patellofemoral Rotational Analyses. <em>Orthopaedic Journal of Sports Medicine</em>, v. 3, p. Epub, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, M ; SAGGIA, M ; NAVES, A ; HAAS, L ; FERNANDES, RA . Extended-Release Oxycodone Hydrochloride (Oxycontin®) for Pain Management In Patients Undergoing Arthroplasty: A Cost Analysis From The Brazilian Public and Private Healthcare Systems Perspectives. <em>Value in Health</em>, v. 18, p. A640, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">TÍRICO, LUÍS EDUARDO PASSARELLI ; DEMANGE, MARCO KAWAMURA ; BONADIO, MARCELO BATISTA ; HELITO, CAMILO PARTEZANI ; GOBBI, RICCARDO GOMES ; PÉCORA, José Ricardo . Medial Closing-Wedge Distal Femoral Osteotomy: Fixation With Proximal Tibial Locking Plate. <em>Arthroscopy Techniques</em>, v. Epub, p. Epub, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, C. P. ; HELITO, P. V. P. ; BONADIO, M. B. ; PECORA, J. R. ; BORDALO-RODRIGUES, M. ; CAMANHO, G. L. ; DEMANGE, M. K. . Correlation of Magnetic Resonance Imaging With Knee Anterolateral Ligament Anatomy: A Cadaveric Study. <em>Orthopaedic Journal of Sports Medicine</em>, v. 3, p. epub, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HELITO, C. P. ; DEMANGE, M. K. . Outcomes After Combined ACL and ALL Reconstruction: Letter to the Editor. <em>American Journal of Sports Medicine</em>, v. 43, p. NP17-NP17, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">HINCKEL, BETINA BREMER ; GOBBI, RICCARDO GOMES ; BONADIO, MARCELO BATISTA ; DEMANGE, MARCO KAWAMURA ; PÉCORA, José Ricardo ; CAMANHO, GILBERTO LUIS . Reconstrução do ligamento patelofemoral medial com tendão quadricipital combinada com patelotibial medial com tendão patelar: experiência inicial. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 51, p. 75-82, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; ZANON, B. ; HELITO, Camilo Partezani ; PECORA, J. R. ; CAMANHO, Gilberto Luís ; MIYAHARA, Helder de Souza ; OLIVEIRA, PRD ; VICENTE, JRN ; LIMA, ALM . Clinical and Epidemiological Differences Between Septic Arthritis of the Knee and Hip Causes By Oxacillin-sensitive and Resistant S. Aureus. <em>Clinics (USP. Impresso)</em>, v. 70, p. 30-33, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HINCKEL, Betina Bremer ; Gobbi, Riccardo Gomes ; FILHO, Eduardo Noda Kihara ; PÉCORA, José Ricardo ; CAMANHO, Gilberto Luís ; RODRIGUES, Marcelo Bordalo . Are the Osseous and Tendinous – Cartilaginous Tibal Tuberosity – Trochlear Groove Distances The Same On CT and MRI?. <em>Skeletal Radiology</em>, v. 44, p. 1085-1093, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; COSTA, Hugo Pereira ; BONADIO, Marcelo Batista ; PECORA, José Ricardo ; RODRIGUES, Marcelo Bordalo ; CAMANHO, Gilberto Luís . Evaluation of the Anterolateral Ligamento f the Knee by Means of Magnetic Resonance Examination. <em>Revista Brasileira de Ortopedia (English Edition)</em>, v. 50, p. 214-219, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; REBOUÇAS MOREIRA, Tiago Amaral ; GOBBI, Riccardo Gomes ; MUSTACCHI, Zan ; PÉCORA, José Ricardo Passarelli ; TIRICO, Luís Eduardo ; CAMANHO, Gilberto Luís . Trochlear Dysplasia and Patellar Instability in Patients with Down Syndrome. <em>Revista Brasileira de Ortopedia (English Edution)</em>, v. 50, p. 159-163, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; BONADIO, Marcelo Batista ; GOBBI, Riccardo Gomes ; DA MOTA E ALBUQUERQUE, Roberto Freire ; PÉCORA, José Ricardo ; CAMANHO, Gilberto Luís . Is it safe to reconstruct the knee anterolateral ligament with a femoral tunnel? Frequency of lateral colateral ligament and popliteus tendo injury. <em>International Orthopaedics</em>, v. 1, p. 1, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; VON KEUDELL, Arvind ; PROBST, Christian ; YOSHIOKA, Hiroshi ; GOMOLL, Andreas H. . Patient-Specific Implants for Lateral Unicompartmental Knee Arthroplasty. <em>International Orthopaedics</em>, v. 1, p. EPUB, 2015.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; SISTO, Marco ; RODEO, Scott . Future Trends For Unimpartimental Arthritics of the Knee. <em>Clinics in Sports Medicine</em>, v. 33, p. 161-174, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. . Nonanatomic Anterior Cruciate Ligament Reconstruction With Double-Stranded Semitendinosus Grafts in Children With Open Physes: Minimum 15-Year Follow-up. <em>American Journal of Sports Medicine</em>, p. 1, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; DE ALMEIDA, Adriano Marques ; RODEO, Scott A. . Updates in biological therapies for knee injuries: tendons. <em>Current Reviews in Musculoskeletal Medicine</em>, v. 7, p. 239-246, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; ROSA, B R ; ASPERTI, A M ; HELITO, Camilo Partezani ; FERNANDES, T. L. ; HERNANDEZ, Arnaldo Jose . Epidemiology of sports injuries on collegiate athletes at a single center. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 22, p. 321-324, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; SANTOS, Alexandre Leme Godoy ; PRADO, Marcelo Pires ; FERNANDES, Tulio Diniz ; GIGLIO, Pedro Nogueira ; HINTERMANN, Beat . Cartilage lesions and ankle osteoarthrosis: review of the literature and treatment algorithm. <em>Revista Brasileira de Ortopedia (English Edition)</em>, v. 49, p. 565-572, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; BONADIO, Marcelo Batista ; DA MOTA E ALBUQUERQUE, Roberto Freire ; PÉCORA, José Ricardo ; CAMANHO, Gilberto Luís ; ANGELINI, Fábio Janson . Screw loosening and iliotibial band friction after posterolateral corner reconstruction. <em>Knee (Oxford)</em>, v. 21, p. 769-773, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; BONADIO, Marcelo Batista ; HELITO, Camilo Partezani ; GURY, L. A. ; PECORA, J. R. ; ANGELINI, Fábio Janson . Correlation between magnetic resonance imaging and physical exam in assessment of injuries to posterolateral corner of the knee. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 22, p. 124-126, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; BONADIO, Marcelo Batista ; ANGELINI, Fábio Janson ; TIRICO, Luis Eduardo Passarelli ; PECORA, José Ricardo ; CAMANHO, Gilberto Luís . Reinforcement with fascia lata as an alternative in the repair of chronic quadriceps tendon injuries. <em>Upsala Journal of Medical Science</em>, v. 1, p. 1-3, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, C. P. ; DE BRITO, A. T. S. ; GOBBI, R. G. ; TIRICO, L. E. P. ; PECORA, J. R. ; CAMANHO, G. L. . Evaluation of quality of life and walking ability among amputated patients and those who refused to undergo amputation following infection of total knee arthroplasty: Small case series. <em>Prosthetics and Orthotics International</em>, v. 7, p. 1-7, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, C. P. ; BONADIO, M. B. ; TIRICO, L. E. P. ; GOBBI, R. G. ; PECORA, J. R. ; CAMANHO, G. L. . Radiographic Landmarks for Locating the Femoral Origin and Tibial Insertion of the Knee Anterolateral Ligament. <em>American Journal of Sports Medicine</em>, v. 7, p. 1-7, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; HELITO, Paulo Victor Partezani ; COSTA, Hugo Pereira ; BORDALO-RODRIGUES, Marcelo ; PECORA, José Ricardo ; CAMANHO, Gilberto Luís . MRI evaluation of the anterolateral ligament of the knee: assessment in routine 1.5-T scans. <em>Skeletal Radiology</em>, v. 43, p. 1421-1427, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, C. P. ; BONADIO, M. B. ; ALBUQUERQUE, R. F. M. ; PECORA, José Ricardo ; CAMANHO, Gilberto Luís ; ANGELINI, Fábio Janson . Functional assessment of combined reconstruction of the anterior cruciate ligament and posterolateral corner with a single femoral tunnel: a two-year minimum follow-up. <em>International Orthopaedics</em>, p. online, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; JUNQUEIRA, JJM ; GOBBI, Riccardo Gomes ; ANGELINI, Fábio Janson ; REZENDE, M. U. ; TIRICO, Luis Eduardo Passareli ; ALBUQUERQUE, R. F. M. ; PECORA, José Ricardo ; CAMANHO, Gilberto Luís . Effect of postoperative use of nasal oxygen catheter supplementation in wound healing following total knee arthroplasty. <em>Clinics (USP. Impresso)</em>, v. 69, p. 735-739, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, C. P. ; HELITO, P. V. P. ; BONADIO, M. B. ; DA MOTA E ALBUQUERQUE, R. F. ; BORDALO-RODRIGUES, M. ; PECORA, J. R. ; CAMANHO, G. L. . Evaluation of the Length and Isometric Pattern of the Anterolateral Ligament With Serial Computer Tomography. <em>Orthopaedic Journal of Sports Medicine</em>, v. 2, p. 1-6, 2014.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; MALAVOLTA, Eduardo Angeli ; GOBBIi, Riccardo Gomes ; MANCUSO FILHO, José Antônio . Análise crítica das publicações científicas da Revista Brasileira de Ortopedia no período de 2006 a 2010. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 48, p. 211-215, 2013.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; ALMEIDA, A. M. ; SOBRADO, M. F. ; RODRIGUES, M. B. ; PEDRINELLI, A. ; HERNANDEZ, AJ ; HERNANDEZ, A. J. . Platelet-rich plasma added to the patellar tendon harvest site during anterior cruciate ligament reconstruction enhanced healing. <em>Journal of Bone and Joint Surgery. American Volume (Print ed.)</em>, v. 95-A, p. 942, 2013.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, Camilo Partezani ; MIYAHARA, Helder de Souza ; BONADIO, Marcelo Batista ; TIRICO, Luís Eduardo Passareli ; GOBBI, Riccardo Gomes ; ANGELINI, Fábio Janson ; PÉCORA, José Ricardo ; CAMANHO, Gilberto Luís . Estudo anatômico do ligamento anterolateral do joelho. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 48, p. 368-373, 2013.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, C. P. ; BONADIO, M. B. ; TIRICO, L. E. P. ; GOBBI, R. G. ; PECORA, J. R. ; CAMANHO, Gilberto Luís . Anatomy and Histology of the Knee Anterolateral Ligament. <em>Orthopaedic Journal of Sports Medicine</em>, v. 1, p. 1, 2013.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; HELITO, C. P. ; GOBBI, R. G. ; PECORA, J. R. ; CAMANHO, Gilberto Luís ; TIRICO, L. E. P. . Revision of total knee arthroplasty in a patient with contralateral transfemoral amputation: Case report. <em>Prosthetics and Orthotics International</em>, v. 1, p. 1, 2013.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; VON KEUDELL, Arvind ; GOMOLL, Andreas Hans . Latrogenic instability of the lateral meniscus after partial meniscectomy. <em>Knee (Oxford)</em>, v. 20, p. 360-363, 2013.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; GOMOLL, Andreas H. . The use of osteochondral allografts in the management of cartilage defects. <em>Current Reviews in Musculoskeletal Medicine</em>, v. 5, p. 229-235, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; TÍRICO, Luís Eduardo Passarelli . O uso do transplante osteocondral a fresco no tratamento das lesões osteocondrais do joelho. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 47, p. 694-700, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; BITAR, A. C. ; D’ELIA, C. O. ; CAMANHO, Gilberto Luís . Traumatic Patellar Dislocation: Nonoperative Treatment Compared With MPFL Reconstruction Using Patellar Tendon. <em>American Journal of Sports Medicine</em>, v. 40, p. 114-122, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; ALBINO, R. B. ; SANTOS, L. S. ; GOBBI, R. G. ; IAMAGUSHI, M. ; TIRICO, L. E. P. ; PECORA, J. R. . Dor na ponta da haste após revisão de artroplastia total de joelho. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 47, p. 73-76, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; ALBINO, R. B. ; SANTOS, L. S. ; GOBBI, R. G. ; IAMAGUSHI, M. ; TIRICO, L. E. P. ; PECORA, J. R. . Dor na ponta da haste após revisão de artroplastia total de joelho. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 47, p. 73-76, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; TÍRICO, Luís Eduardo Passarelli ; PASQUALIN, Thiago ; PÉCORA, José Otávio ; GOBBI, R. G. ; PÉCORA, José Ricardo . Estudo da estabilidade dos componentes na artroplastia total do joelho sem cimento. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 20, p. 230-234, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; IAMAGUCHI, Maurício Masasi ; HELITO, Camilo Partezani ; GOBBI, Riccardo Gomes ; TIRICO, Luís Eduardo Passarelli ; PECORA, José Ricardo ; CAMANHO, Gilberto Luís . Valor da avaliação radiográfica pré-operatória dos defeitos ósseos no joelho nas revisões de artroplastia. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 47, p. 714-718, 2012.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, Gilberto Luis ; PÉCORA, José Ricardo ; GOBBI, Riccardo Gomes ; TIRICO, Luis Eduardo Passarelli ; ALBUQUERQUE, Roberto Freire da Mota . Simultaneous anterior cruciate ligament reconstruction and computer-assisted open-wedge high tibial osteotomy: A report of eight cases. <em>Knee (Oxford)</em>, v. 18, p. 387-391, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. . <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 46, p. 630-633, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; FREGNI, F. . Limits to clinical trials in surgical areas. <em>Clinics (USP. Impresso)</em>, v. 66, p. 159-161, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; MALAVOLTA, E. A. ; GOBBI, R. G. ; IMAMURA, M. ; FREGNI, F. . Ensaios clínicos controlados e randomizados na ortopedia: dificuldades e limitações. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 46, p. 452-459, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, Gilberto LuÍS ; BITAR, A. C. ; VIEGAS, Alexandre de Christo ; HERNANDEZ, Arnaldo Josão . Conservative versus surgical treatment for repair of the medial patello femoral ligament in acute dislocations of the patella. <em>Journal of Bone and Joint Surgery. British Volume (Print)</em>, v. 93, p. 116, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; PÉCORA, José Ricardo ; HINCKEL, Betina Bremer ; GOBBI, Riccardo Gomes ; TIRICO, Luís Eduardo Passarelli ; IAMAGUCHI, Maurício Masasi . Correlação inter-observador da classificação de falhas ósseas em artroplastia de joelho. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 19, p. 368-372, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, Gilberto Luís ; BITAR, Alexandre Carneiro ; D’ELIA, Caio Oliveira ; VIEGAS, Alexandre Christo . Estudo prospectivo randomizado sobre a luxação traumática de patela: tratamento conservador versus reconstrução do ligamento femoropatelar medial com tendão patelar – mínimo de dois anos de seguimento. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 46, p. 675-683, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; OLIVEIRA, V. G. ; DELIA, C. O. ; TIRICO, Luís Eduardo Passarelli ; GOBBI, Riccardo Gomes ; PÉCORA, José Otávio ; CAMANHO, Gilberto Luís ; ANGELINI, F. J. . Judet quadricepsplasty in the treatment of posttraumatic knee rigidity: long-term outcomes of 45 cases. <em>The Journal of Trauma</em>, v. 72, p. 77-80, 2011.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; GOBBI, R. G. ; BARRETO, R. ; PECORA, J. R. ; REZENDE, M. U. ; BARROS FILHO, T. E. P. ; LOMBELLO, C. . Transplante autólogo de condrócitos – relato de 3 casos. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 45, p. 449-455, 2010.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; SILVA, R. T. ; MARCHETTO, A. ; PEDRINELLI, A. ; SANTILI, C. ; LAURINO, C. F. S. ; MEIRELLES, E. S. ; LEAO, E. R. ; POSSO, I. P. ; BELLOTI, J. C. ; RUNCO, J. L. ; LECH, O. ; CANTO, R. S. T. ; ROMANEK, R. M. ; LASMAR, R. P. ; ZYLBERSZTEJN, S. . Consenso brasileiro sobre dor perioperatória em ortopedia e traumatologia desportiva. <em>Revista Brasileira de Ortopedia (Impresso)</em>, v. 45, p. 2-15, 2010.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; BARSOTTI, C. E. G. ; FERREIRA, T. F. ; GUIMARAES, T. M. ; ZENAIDE, M. R. ; PECORA, J. R. ; CAMANHO, G. L. . Fluoroscopic analysis of in vivo movement of the insert in rotating platform TKA. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 18, p. 242-244, 2010.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; BITAR, Alexandre Carneiro ; CAMANHO, Gilberto Luís ; DELIA, C. O. ; VIEGAS, A. C . Prospective randomized study about the thraumatic patellar dislocation: the conservative treatment and the MPFL reconstruction with patellar tendon – a minimum 2-year follow-up. <em>Knee Surgery, Sports Traumatology, Arthroscopy</em>, v. 18, p. 44-44, 2010.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; DAMASCENO, M. L. ; FERREIRA, T. F. ; DELIA, C. O. ; PECORA, J. R. ; HERNANDEZ, A. J. ; CAMANHO, G. L. ; CROCI, A. T. ; SANTOS, L.A.U ; HELITO, C. P. . Use of allograft in ligamentar reconstruction of knee. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 17, p. 265-268, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; LETAIF, O. B. ; FRUCCHI, R ; DELIA, C. O. ; ALBUQUERQUE, R. F. M. ; UCHOA, R. M. ; PECORA, J. R ; HERNANDEZ, A. J. ; CAMANHO, G. L. . Comparação funcional entre a revisão de artroplastia de joelho séptica e asséptica. <em>Acta Ortopédica Brasileira</em>, v. 17, p. 159-161, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, Gilberto Luís ; BITAR, Alexandre Carneiro ; HERNANDEZ, Arnoldo Josão ; VIEGAS, Alexandre de Christo . Conservative Versus Surgical Treatment for Repair of the Medial Patellofemoral Ligament in Acute Dislocations of the Patella. <em>Arthroscopy (Print)</em>, v. 25, p. 620-625, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; BITAR, A. C. ; DELIA, C. O. ; CAMANHO, Gilberto Luís . Estudo pós-operatório da luxação patelar traumática. Tratamento conservador e reconstrução do LPFM com tendão patelar – acompanhamento mínimo de dois anos. <em>Revista Brasileira de Medicina do Esporte (Impresso)</em>, v. 15, p. 21-21, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; BITAR, Alexandre Carneiro ; CASTROPIL, W. ; DELIA, Caio Oliveira ; VIEGAS, Alexandre de Christo ; CAMANHO, Gilberto Luís . Reconstrução do ligamento femoropatelar medial utilizando a tira medial do ligamento femoropatelar medial. Resultados após acompanhamento mínimo de dois anos. <em>Revista Brasileira de Medicina do Esporte (Impresso)</em>, v. 15, p. 21-21, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. ; PECORA, J. R. ; GREVE, J. M. D. ; SILVA, A. L. P. ; REGINATO, T. J. B. . Isokinetic evaluation of patients submitted to total knee arthroplasty. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 17, p. 22-25, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. ; PECORA, J. R. ; GREVE, J. M. D. ; SILVA, A. L. P. ; REGINATO, T. J. B. . Isokinetic evaluation of patients submitted to total knee arthroplasty. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 17, p. 22-25, 2009.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. . Isokinectic evaluation in patients submitted to arthroplasty by the minimally invasive and transquadriciptal approaches. <em>Clinics (USP. Impresso)</em>, v. 63, p. 140-140, 2008.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. . Isokinectic evaluation in patients submitted to arthroplasty by the minimally invasive and transquadriciptal approaches. <em>Clinics (USP. Impresso)</em>, v. 63, p. 140-140, 2008.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; DOTA, A. F. ; ZENAIDE, M. R. ; CAMANHO, G. L. ; HERNANDEZ, A. J. . Estudo das propriedades mecânicas do ligamento cruzado posterior e do ligamento patelar de cadáveres de seres humanos após utilização de radiofrequência. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 15, p. 138-142, 2007.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; KAKUDA, C. M. S. ; PEREIRA, C. A. M. ; SAKAKI, M. H. ; MOTTA, R. A. . Influência do ligamento da cabeça do fêmur na mecânica do quadril. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 15, p. 187-190, 2007.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, Gilberto Luís ; HERNANDEZ, Arnaldo Jose ; BITAR, Alexandre Carneiro ; CAMANHO, Luís Fellipe . Results of meniscectomy for treatment of isolated meniscal injuries: Correlation between results and etiology of injury. <em>Clinics (USP. Impresso)</em>, v. 61, p. 133-138, 2006.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. ; VIEGAS, A. C. ; BITAR, A. C. ; HERNANDEZ, A. J. . Estudo prospectivo e comparativo entre o tratamento conservador e o cirúrgico – Reparo do ligamento femoropatelar medial nas luxações agudas de patela. <em>Acta Ortopédica Brasileira (Impresso)</em>, v. 14, p. 30-34, 2006.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; CAMANHO, G. L. ; VIEGAS, A. C. ; HERNANDEZ, A. J. . Estudo prospectivo e comparativo entre o tratamento conservador e o cirúrgico. Reparação do ligamento femoro-patelar medial nas luxações agudas da patela. <em>Revista Portuguesa de Ortopedia e Traumatologia</em>, v. 13, p. 1-15, 2005.</p>
+
+<p class="text-gray-700 font-light leading-relaxed">DEMANGE, Marco K. ; SANTOS, A. O. ; PINHEIRO, V. R. ; BRANDALISE, S. R. ; SEVERICHE, A. F. A. ; ETCHEBEHERE, E. C. S. C. ; RAMOS, C. D. ; CAMARGO, E. E. . Scintigraphic follow-up of the effects of therapy with hydroxyurea on splenic function in patients with sickle cell disease. <em>The Journal of Nuclear Medicine</em>.</p>
+            
+
 
             </div>
           </div>
@@ -1790,7 +2053,7 @@
       const mediaCarouselTrack = document.getElementById('media-carousel-track');
       const mediaCards = mediaCarouselTrack.children;
       const mediaTotalCards = mediaCards.length;
-      const mediaOriginalCardsCount = 5; // Number of original cards (before duplication)
+      const mediaOriginalCardsCount = 7; // Number of original cards (before duplication)
 
       // Media Drag/Swipe functionality variables
       let mediaIsDragging = false;
